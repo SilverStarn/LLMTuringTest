@@ -1,6 +1,6 @@
 
-# Project Name
-LLM Live Turing Test : Developed by Woo Sik Choi & Adeel Sultan
+# LLM Live Turing Tes
+Developed by Woo Sik Choi & Adeel Sultan
 
 ## Description
 
