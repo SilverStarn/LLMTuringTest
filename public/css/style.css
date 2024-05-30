@@ -1,0 +1,219 @@
+/*
+* Name: Woo Sik Choi & Adeel Sultan
+* Date: 11/22/2023
+* Description: Styling for all the html files as default, for the resuability 
+* and consistence of the themes
+*/
+
+/* Default */
+html {
+  height: 100%;
+  width: 100%;
+  background-color: #00001C;
+  color: #F0F0F0;
+  font-family: Arimo;
+}
+
+/* Text coloring for anchor elements */
+a {
+  color: #F0F0F0;
+  text-decoration: none;
+}
+
+.background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, #1b2735 0%, #00001C 100%);
+  z-index: -1;
+  overflow: hidden;
+}
+
+.user-container {
+  display: flex;
+  justify-content: end;
+}
+
+.user-container .user-item {
+  align-self: flex-end;
+}
+
+/* Master container for every page; column arrangement */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 100%;
+}
+
+#user {
+  font-size: 1.5em;
+  color: #d3d373;
+}
+
+@media (max-width: 786px)  {
+  body {
+    width: 100%;
+  }
+  .page-container{
+    width: 100%;
+  }
+  .background {
+    max-width: 100%;
+  }
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 700px;
+  flex: 0 1 1;
+  z-index: -1;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em auto;
+  width: 100%;
+}
+
+.top-nav-style {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em auto;
+}
+
+
+.left-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.nav-spacer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+
+.login-container #play:hover {
+  background-color: #44ca6c;
+  cursor: pointer;
+}
+
+.login-container #login:hover {
+  background-color: #185ADE;
+  cursor: pointer;
+
+}
+
+.login-container #sign-up:hover {
+  background-color: #185ADE;
+  cursor: pointer;
+
+}
+
+/* Add a red background color to the cancel button */
+#close:hover {
+  background-color: #970000;
+}
+
+
+.btn:hover {
+  background-color: #185ADE;
+  cursor: pointer;
+}
+
+
+/* Styling the elements that work as buttons(they will be modified to be button elements after we implement js files) */
+.btn {
+  border: solid #F0F0F0 2pt;
+  border-radius: 2em;
+  min-width: 5em;
+  min-height: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+}
+
+.anchor-spacer {
+  border: solid transparent 2pt;
+  border-radius: 2em;
+  min-width: 5em;
+  min-height: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+}
+
+#user-display {
+  position: fixed; 
+  top: 0; 
+  right: 0; 
+  padding: 10px;
+}
+
+#user-display #user:hover{
+    text-decoration: underline;
+}
+
+
+.disclaimer-container {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8%;
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.disclaimer-content {
+  max-width: 100%;
+  min-width: 100%;
+  margin: 0 auto;
+}
+
+.disclaimer-content > p > span {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Graceful degradation for smaller screens */
+@media screen and (max-width: 768px) {
+    .disclaimer-container {
+        font-size: 0.9em; /* Slightly smaller font for smaller screens */
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .disclaimer-container {
+        font-size: 0.8em; /* Even smaller font for very small screens */
+        padding: 8px;
+    }
+}
+
+#verifier-link {
+  display: none;
+}

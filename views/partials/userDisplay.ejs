@@ -1,0 +1,7 @@
+<div id="user-item">
+<% if (user && user.username) { %>
+    <p>Welcome, <a href="/profile"><span id = "user"> <%= user.username %> ! </span> </a></p>
+<% } else { %>
+    <p>Guest</p>
+<% } %>
+</div>

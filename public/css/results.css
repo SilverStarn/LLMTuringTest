@@ -1,0 +1,119 @@
+/*
+* Name: Woo Sik Choi & Adeel Sultan
+* Date: 11/22/2023
+* Description: Styling for the results page
+*/
+
+
+#player-icon {
+  max-width: 15em;
+  flex-shrink: 1;
+}
+
+#title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5em;
+}
+
+#left-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+tr {
+  width: 6em;
+}
+
+th {
+  font-size: 1.75em;
+  text-indent: -2em;
+  height: 3em;
+}
+
+#data-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4em;
+}
+
+#results-table {
+  width: 75%;
+}
+
+.left-data {
+  font-size: 1.25em;
+  text-indent: no-indent;
+  height: 1em;
+  width: 5em;
+  text-align: center;
+  padding: 15px;
+}
+
+.right-data {
+  font-size: 1.25em;
+  text-indent: no-indent;
+  height: 1em;
+  width: 5em;
+  text-align: left;
+  padding: 15px;
+}
+
+.subheader {
+  text-align: center;
+}
+
+#table-spacer {
+  height: 2em;
+
+}
+
+hr {
+  color: #F0F0F0;
+}
+
+@media only screen and (max-width: 786px)  {
+  body {
+    width: 100%;
+    font-size: 80%;
+  }
+  .page-container{
+    width: 100%;
+  }
+  .background {
+    max-width: 100%;
+  }
+  .nav-container {
+    flex-direction: column;
+    justify-content: center;
+    alight-items: center;
+  }
+
+  .left-nav {
+    flex-direction: row;
+    justify-content: center;
+    alight-items: center;
+    margin: 1em;
+  }
+
+  .anchor-spacer {
+    border: solid transparent 2pt;
+    border-radius: 0em;
+    min-width: 0em;
+    min-height: 0em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0em;
+  }
+
+  .btn {
+    margin: 0.5em;
+  }
+
+
+}

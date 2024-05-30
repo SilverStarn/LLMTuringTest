@@ -1,0 +1,106 @@
+/*
+* Name: Woo Sik Choi & Adeel Sultan
+* Date: 11/22/2023
+* Description: Styling for the about page
+*/
+
+
+#title {
+  font-size: 2.5em;
+  text-align: center;
+}
+
+#title-container {
+  margin-top: 3vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+}
+
+#ai-icon,
+#player-icon {
+  max-width: 40%;
+  margin: 10%;
+  flex-shrink: 1;
+}
+
+#text-container {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  font-size: 1.5vw;
+  margin-bottom: 5vw;
+  align-items: center;
+}
+
+.about-game {
+  text-indent: 2vw;
+  line-height: 2.5vw;
+}
+
+@media only screen and (max-width: 786px)  {
+  body {
+    width: 100%;
+    font-size: 80%;
+  }
+  .page-container{
+    width: 100%;
+  }
+  .background {
+    max-width: 100%;
+  }
+  .nav-container {
+    flex-direction: column;
+    justify-content: center;
+    alight-items: center;
+  }
+
+  .left-nav {
+    flex-direction: row;
+    justify-content: center;
+    alight-items: center;
+    margin: 1em;
+  }
+
+  .anchor-spacer {
+    border: solid transparent 2pt;
+    border-radius: 0em;
+    min-width: 0em;
+    min-height: 0em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0em;
+  }
+
+  .btn {
+    margin: 0.5em;
+  }
+
+  .login-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+  }
+
+  .page-container {
+    height: 100%;
+  }
+
+  #text-container {
+    font-size: 1.25em;
+  }
+  .about-game {
+    text-indent: 4vw;
+    line-height: 5vw;
+  }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="/css/style.css" rel="stylesheet" type="text/css" />
+  <link href="/css/play.css" rel="stylesheet" type="text/css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Arimo:wght@600&family=Jost:wght@400;600&family=Lobster+Two&family=Poppins:wght@500&display=swap');
+  </style>
+  
+</head>
+
+<body>
+  <div class="user-container">
+   <%- include('partials/userDisplay') %>
+  </div>
+  <div class="background"></div>
+  <div class="page-container">
+
+    <% if (typeof isCreated !== 'undefined') { %>
+        <div id="question-created" class="alert-box">
+          <p>Test successfully uploaded!</p>
+        </div>
+    <% } %>
+
+
+    <div class="nav-container">
+
+      <div class="left-nav">
+        <a href="/" class="btn" id="home">home</a>
+        <a href="about" class="btn" id="about">about</a>
+      </div>
+      <div class="icon-container">
+        <img id="ai-icon" src="/img/AI_icon.svg">
+        <img id="player-icon" src="/img/Human_icon.svg">
+      </div>
+      <div class="nav-spacer">
+        <a class="anchor-spacer"></a>
+      </div>
+
+    </div>
+
+
+    <div class="title-container">
+      <h1 id="prompt-label">Choose Your Role!</h1>
+    </div>
+    <div class="role-container">
+      <a href="/playHost" class="role tooltip" id="host">Host</a>
+      <a href="/playTester" class="role tooltip" id="player">Player</a>
+    </div>
+
+  </div>
+  <footer>
+  <%- include('partials/disclaimer') %>
+    <a id="verifier-link" href="https://validator.w3.org/">W3C Markup Validation Service</a>
+  </footer>
+  <script src="/js/play.js"></script>
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>

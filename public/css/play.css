@@ -1,0 +1,179 @@
+/*
+* Name: Woo Sik Choi & Adeel Sultan
+* Date: 11/22/2023
+* Description: Styling for the play page
+*/
+
+#ai-icon,
+#player-icon {
+  max-width: 40%;
+  margin: 10%;
+  flex-shrink: 1;
+}
+
+#prompt-label {
+  font-size: 2em;
+}
+
+#prompt {
+  margin-top: 2em;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.role-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  height: 30vh; 
+}
+
+.role {
+  border: solid #F0F0F0 2pt;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15%;
+  margin: 20px;
+  min-width: 35%;
+  max-width: 40%;
+  font-size: 25pt;
+}
+
+#host:hover {
+  background-color: #b630c0;
+  cursor: pointer;
+  border: 1.55pt #F1F1F1 solid;
+}
+
+#player:hover {
+  background-color: #185ADE;
+  cursor: pointer;
+  border: 1.55pt #F1F1F1 solid;
+}
+
+#pick-response {
+  margin-top: 1em;
+}
+
+#pick-response-text {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+
+@media only screen and (max-width: 786px)  {
+  body {
+    width: 100%;
+    font-size: 80%;
+  }
+  .page-container{
+    width: 100%;
+  }
+  .background {
+    max-width: 100%;
+  }
+  .nav-container {
+    flex-direction: column;
+    justify-content: center;
+    alight-items: center;
+  }
+
+  .left-nav {
+    flex-direction: row;
+    justify-content: center;
+    alight-items: center;
+    margin: 1em;
+  }
+
+  .anchor-spacer {
+    border: solid transparent 2pt;
+    border-radius: 0em;
+    min-width: 0em;
+    min-height: 0em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0em;
+  }
+
+  .btn {
+    margin: 0.5em;
+  }
+
+  .response-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .response {
+    width: 80%;
+  }
+}
+
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, #1b2735 0%, #00001C 100%);
+  z-index: -1;
+  overflow: hidden;
+
+}
+
+.background::before,
+.background::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: -1;
+}
+
+.background::before {
+  background-image: radial-gradient(#809a65 1px, transparent 1px), radial-gradient(#c1a9a9 1px, transparent 2px);
+  background-size: 100px 100px;
+  background-position: 0 0, 50px 50px;
+  animation: zoom 15s linear infinite;
+}
+
+.background::after {
+  background-image: radial-gradient(#58c8d0 1px, transparent 3px), radial-gradient(#585492 2px, transparent 2px);
+  background-size: 150px 150px;
+  background-position: 0 0, 75px 75px;
+  animation: zoom 70s linear infinite;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.5);
+  }
+}
+
+#question-created {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3684d9;
+  color: #fafffa;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
+  z-index: 1000; /* Ensure it's above other elements */
+}

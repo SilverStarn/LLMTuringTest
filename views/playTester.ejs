@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="/css/style.css" rel="stylesheet" type="text/css" />
+  <link href="/css/playTester.css" rel="stylesheet" type="text/css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Arimo:wght@600&family=Jost:wght@400;600&family=Lobster+Two&family=Poppins:wght@500&display=swap');
+  </style>
+</head>
+
+<body>
+  <div class="user-container">
+   <%- include('partials/userDisplay') %>
+  </div>
+    <div class="background"></div>
+    <div class="page-container">
+      
+      <% if (typeof isCorrectGuess !== 'undefined') { %>
+        <% if (isCorrectGuess) { %>
+          <div id="correct-answer" class="alert-box">
+            <p>Congratulations! You guessed correctly.</p>
+          </div>
+      <% } else { %>
+        <div id="wrong-answer" class="alert-box">
+          <p>You chose the human answer! Try again!</p>
+        </div>
+        <% } %>
+      <% } %>
+
+      
+      <div class="nav-container">
+        <div class="top-nav-style">
+          <a href="/" class="btn" id="home">home</a>
+          <a href="/play" class="btn" id="play">play</a>
+          <a href="about" class="btn" id="about">about</a>
+        </div>
+      </div>
+
+    <div id="game-container">
+      <div id="title-container">
+        <h2 id="question">Question : <%= gameData.question %> </h1>
+        <h3> Which one is the AI generated answer? </h2>
+      </div>
+      <div id="test-container">
+        <form id="get-game-form" action="/submitAnswer" method="post">
+          <% gameData.answers.forEach(function(answer, index) { %>
+            <div id="answer-container">
+              <input id="radio<%= index %>" type="radio" name="answer" value="<%= index %>" required>
+              <label for="radio<%= index %>"><%= answer %></label>
+            </div>
+          <% }); %>
+          <input type="hidden" name="aiAnswerIndex" value="<%= gameData.aiAnswerIndex %>">
+          <div id= "submit-scores">
+          <button type="submit" class="btn" id="tester-input">Submit</button>
+          <h3 id= "scores">Scores : <%= userScores %></h3>
+          </div>
+        </form>
+      </div>
+      </div>
+
+  </div>
+  <footer>
+  <%- include('partials/disclaimer') %>
+    <a id="verifier-link" href="https://validator.w3.org/">W3C Markup Validation Service</a>
+  </footer>
+  <script src="/js/playTester.js"></script>
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
