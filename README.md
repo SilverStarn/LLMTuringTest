@@ -30,23 +30,19 @@ Players are then given a mix of human and AI answers and must guess which one is
 5. Responsive Design
   The user interface is designed to be responsive and user-friendly, with a visually appealing background and centered buttons for ease of use.
 
-6. Technology Stack
-  -Backend
+6. Technology Stack - Backend
   Node.js: The server-side runtime environment.
   Express.js: The web application framework for routing and middleware.
   PostgreSQL: The database system for storing user profiles, sessions, and game data.
   bcrypt: For hashing passwords securely.
   multer: For handling file uploads (profile photos).
   sharp: For image processing.
-  OpenAI API: To fetch AI-generated responses.
-
-  -Frontend
-  HTML: For structuring the web pages.
+  OpenAI API: To fetch AI-generated responses.-Frontend
+7. Technology Stack - Frontend  HTML: For structuring the web pages.
   CSS: For styling the web pages.
   JavaScript: For client-side scripting and DOM manipulation.
   EJS: Embedded JavaScript templating for rendering dynamic content.
-  
-7. Development Tools:
+8. Development Tools:
   Replit: An online IDE for development and testing.
 
 
