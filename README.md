@@ -1,5 +1,5 @@
 
-# LLM Live Turing Tes
+# LLM Live Turing Test
 Developed by Woo Sik Choi & Adeel Sultan
 
 ## Description
