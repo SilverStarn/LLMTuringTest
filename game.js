@@ -5,8 +5,6 @@
  * Known Bugs : Some OpenAI API models malfunction, so it might not create and grab "proper" AI responses. I found out after I debugged for five hours and learned that it was not because of our codes   
  */
 
-// LLMKey : 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
-// Alternative : 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
 const LLMKey = process.env['GPTAPIKey'];
 // If there is anything going wrong with connection, change it to positive
 const NUM_RETRIES = 5;
