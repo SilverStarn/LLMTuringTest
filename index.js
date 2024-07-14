@@ -22,7 +22,7 @@ app.use(cookieParser());
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
-const mySecret = process.env["DBPassword"]; // h89vc8SszkV7tSY9gUJGDw
+const mySecret = process.env["DBPassword"];
 
 // PostgreSQL pool configuration using environment variables
 const pool = new Pool({
